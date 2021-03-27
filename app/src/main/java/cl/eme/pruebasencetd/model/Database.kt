@@ -6,40 +6,40 @@ import androidx.room.*
 import timber.log.Timber
 
 @Dao
-interface Products2Dao {
+interface CakesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun Cakes(products2List: List<Cakes>)
+    suspend fun insertCakes(cakesList: List<Cakes>)
 
-    @Query("SELECT * FROM product2")
-    fun getCakes() : LiveData<List<Products2>>
+    @Query("SELECT * FROM cakes")
+    fun getCakes() : LiveData<List<Cakes>>
 
-    @Query("SELECT * FROM product2 WHERE id=:code")
-    fun getProductId2 (code:Int) : LiveData<Products2>
+    @Query("SELECT * FROM cakes WHERE id=:code")
+    fun getCakesId (code:Int) : LiveData<Cakes>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertProductDetail2(productDetail2: ProductDetail2)
+    suspend fun insertCakeDetails(cakeDetails: CakeDetails)
 
-    @Query("SELECT * FROM productDetail2")
-    fun getProductDetail2(code: Int) : LiveData<ProductDetail2>
+    @Query("SELECT * FROM cakeDetails")
+    fun getCakeDetails(code: Int) : LiveData<CakeDetails>
 
-    @Query("SELECT * FROM productDetail2 WHERE id=:code")
-    fun getProductDetailId2(code:Int) : LiveData<ProductDetail2>
+    @Query("SELECT * FROM cakeDetails WHERE id=:code")
+    fun getCakeDetailsId(code:Int) : LiveData<CakeDetails>
 
-    @Database(entities = [Products2::class, ProductDetail2::class], version = 1)
-    abstract class Products2Database : RoomDatabase() {
-        abstract fun products2Dao() : Products2Dao
+    @Database(entities = [Cakes::class, CakeDetails::class], version = 1)
+    abstract class CakesDatabase : RoomDatabase() {
+        abstract fun cakesDao() : CakesDao
     }
 
     class ProductsApplication : Application() {
         companion object {
-            var products2Database: Products2Database? = null
+            var cakesDatabase: CakesDatabase? = null
         }
 
         override fun onCreate() {
             super.onCreate()
             Timber.d("OnCreate de Application")
-            products2Database =
-                Room.databaseBuilder(this, Products2Database::class.java, "Product_DataBase").build()
+            cakesDatabase =
+                Room.databaseBuilder(this, CakesDatabase::class.java, "Cakes_DataBase").build()
 
         }
 
