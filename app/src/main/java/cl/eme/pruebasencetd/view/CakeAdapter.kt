@@ -10,11 +10,11 @@ import cl.eme.pruebasencetd.model.Cakes
 import coil.load
 
 
-class CakesAdapter: RecyclerView.Adapter<CakesVH>() {
+class CakesAdapter : RecyclerView.Adapter<CakesVH>() {
 
     private val selected = MutableLiveData<Cakes>()
 
-    fun selected() : LiveData<Cakes> = selected
+    fun selected(): LiveData<Cakes> = selected
 
     private val cakesList = mutableListOf<Cakes>()
 
@@ -42,12 +42,12 @@ class CakesAdapter: RecyclerView.Adapter<CakesVH>() {
     }
 }
 
-class CakesVH(private val binding: ItemListCakesBinding) : RecyclerView.ViewHolder(binding.root){
+class CakesVH(private val binding: ItemListCakesBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(cakes: Cakes) {
-    binding.tvImageCake.load(cakes.image)
-    binding.tvTitleCake.text = cakes.title
-    binding.tvPdCake.text = cakes.previewDescription
-    binding.tvSizeCake.text = cakes.size
-    binding.tvPriceCake.text = cakes.price
+        binding.tvImageCake.load(cakes.image)
+        binding.tvTitleCake.text = cakes.title
+        binding.tvPdCake.text = cakes.previewDescription
+        binding.tvSizeCake.text = cakes.size
+        binding.tvPriceCake.text = cakes.price
     }
 }

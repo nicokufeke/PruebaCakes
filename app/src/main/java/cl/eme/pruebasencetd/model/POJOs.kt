@@ -5,20 +5,20 @@ import androidx.room.PrimaryKey
 
 //POJOs
 
-@Entity (tableName = "cakes")
+@Entity(tableName = "cakes")
 
-data class Cakes (
+data class Cakes(
         @PrimaryKey val id: Int,
         val title: String,
         val previewDescription: String,
         val size: String,
         val price: String,
         val image: String,
-        )
+)
 
-@Entity (tableName = "cakeDetails")
+@Entity(tableName = "cakeDetails")
 
-data class CakeDetails (
+data class CakeDetails(
         @PrimaryKey val id: Int,
         val title: String,
         val previewDescription: String,
@@ -29,4 +29,4 @@ data class CakeDetails (
         val price: String,
         val lastPrice: String,
         val delivery: String,
-        )
+)

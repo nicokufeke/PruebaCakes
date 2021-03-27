@@ -6,9 +6,9 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:name="cl.eme.pruebasencetd.view.ListingFragment"
         android:id="@+id/main_container"
+        android:name="cl.eme.pruebasencetd.view.ListingFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

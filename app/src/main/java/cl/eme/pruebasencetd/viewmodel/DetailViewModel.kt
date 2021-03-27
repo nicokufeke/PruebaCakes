@@ -7,7 +7,7 @@ import cl.eme.pruebasencetd.model.CakeDetails
 import cl.eme.pruebasencetd.model.Repository
 import kotlinx.coroutines.launch
 
-class DetailViewModel: ViewModel() {
+class DetailViewModel : ViewModel() {
 
     private val repository = Repository()
 /*

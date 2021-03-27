@@ -9,21 +9,23 @@ import retrofit2.http.Path
 interface CakesAPI {
 
     @GET("cakes/")
-    suspend fun getCakes() : Response<List<Cakes>>
+    suspend fun getCakes(): Response<List<Cakes>>
 
     @GET("cakeDetails/{pid}")
-    suspend fun getCake(@Path("pid") id: Int) : Response<CakeDetails>
+    suspend fun getCake(@Path("pid") id: Int): Response<CakeDetails>
 }
 
 //Cliente Retrofit
 
 const val BASE_URL = "https://my-json-server.typicode.com/Himuravidal/cakesApi/"
+
 class RetrofitClient {
     companion object {
 
-        fun instance() : CakesAPI{
+        fun instance(): CakesAPI {
             val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
-                GsonConverterFactory.create()).build()
+                GsonConverterFactory.create()
+            ).build()
 
             return retrofit.create(CakesAPI::class.java)
 

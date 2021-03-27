@@ -11,11 +11,11 @@ import cl.eme.pruebasencetd.databinding.FragmentListingBinding
 import cl.eme.pruebasencetd.viewmodel.ListingViewModel
 import timber.log.Timber
 
-class ListingFragment: Fragment() {
+class ListingFragment : Fragment() {
 
-     private lateinit var binding: FragmentListingBinding
+    private lateinit var binding: FragmentListingBinding
 
-     private val viewModel by viewModels<ListingViewModel>()
+    private val viewModel by viewModels<ListingViewModel>()
 
     private lateinit var adapter: CakesAdapter
 
@@ -32,12 +32,14 @@ class ListingFragment: Fragment() {
 
         return binding.root
     }
+
     private fun initViews() {
         adapter = CakesAdapter()
         binding.rvCakes.adapter = adapter
         binding.rvCakes.layoutManager = GridLayoutManager(context, 1)
 
     }
+
     private fun registerObservers() {
         viewModel.getCakes()
 

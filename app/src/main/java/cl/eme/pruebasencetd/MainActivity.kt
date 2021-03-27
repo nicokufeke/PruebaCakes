@@ -5,38 +5,38 @@ import android.os.Bundle
 import timber.log.Timber
 
 /**
- * [ ] Control de Versiones
- * [ ] Consumo de Datos API
+ * [X] Control de Versiones
+ * [X] Consumo de Datos API
  *      [X] Permiso de Internet.
  *      [X] Cleartext si es https  -> eliminar para probar después.
  *      [X] Dependencias de Retrofit.
- *      [ ] POJOs (listado y detalle).
- *      [ ] Interfaz de Operaciones.
- *      [ ] Cliente de Retrofit.
- * [ ] Repositorio
- * [ ] ViewModel
- * [ ] Activar viewBinding
- * [ ] Modificar el activity_main.xml
- * [ ] Fragmento de Listado
- *      [ ] Layout del Fragmento.
- *      [ ] Layout del Item.
- *      [ ] Adapter + Viewholder + Recyclerview.
- *      [ ] Modificar para usar ViewBinding.
- *      [ ] onClick para elemento del listado.
+ *      [X] POJOs (listado y detalle).
+ *      [X] Interfaz de Operaciones.
+ *      [X] Cliente de Retrofit.
+ * [X] Repositorio
+ * [X] ViewModel
+ * [X] Activar viewBinding
+ * [X] Modificar el activity_main.xml
+ * [X] Fragmento de Listado
+ *      [X] Layout del Fragmento.
+ *      [X] Layout del Item.
+ *      [X] Adapter + Viewholder + Recyclerview.
+ *      [X] Modificar para usar ViewBinding.
+ *      [X] onClick para elemento del listado.
  * [ ] Fragmento de Detalle
- *      [ ] Crear el Layout del Detalle.
+ *      [X] Crear el Layout del Detalle.
  *      [ ] Crear el Fragmento que recibe 1 parámetro (id del auto).
  *      [ ] Crear el Viewmodel para consumir los datos del detalle.
- * [ ] Manejo de Persistencia con ROOM
- *      [ ] Dependencias.
- *      [ ] DAO.
- *      [ ] Cliente de base de datos.
- *      [ ] Clase que extiende de application para inicializar la base de datos.
- *      [ ] Agregar al manifest application.
- *      [ ] Actualizar repo para leer de base de datos.
- * [ ] Refactorización y limpieza (analyze -> inspect code)
- * [ ] Test Unitario
- * [ ] Loading
+ * [X] Manejo de Persistencia con ROOM
+ *      [X] Dependencias.
+ *      [X] DAO.
+ *      [X] Cliente de base de datos.
+ *      [X] Clase que extiende de application para inicializar la base de datos.
+ *      [X] Agregar al manifest application.
+ *      [X] Actualizar repositorio para leer de base de datos.
+ * [X] Refactorización y limpieza (analyze -> inspect code)
+ * [X] Test Unitario
+ * [X] Test Integral
  */
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         initLog()
     }
+
     private fun initLog() {
         Timber.plant(Timber.DebugTree())
     }
