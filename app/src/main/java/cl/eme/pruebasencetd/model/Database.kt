@@ -1,9 +1,7 @@
 package cl.eme.pruebasencetd.model
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import timber.log.Timber
 
 @Dao
 interface CakesDao {

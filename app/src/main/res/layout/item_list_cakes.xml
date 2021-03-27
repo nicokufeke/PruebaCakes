@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_normal"
+    android:layout_marginTop="@dimen/margin_normal"
+    android:layout_marginEnd="@dimen/margin_normal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="386dp"
+        android:layout_height="115dp"
+        android:background="#F0F4C3"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvPriceCake"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="64dp"
+            android:text="Price"
+            android:textAllCaps="false"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tvImageCake"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSizeCake"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="24dp"
+            android:text="Size"
+            android:textAllCaps="false"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tvImageCake"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleCake"
+            android:layout_width="117dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Nombre"
+            android:textAllCaps="false"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tvImageCake"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tvImageCake"
+            android:layout_width="69dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvPdCake"
+            android:layout_width="152dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:text="PreviewDescription"
+            android:textAllCaps="false"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tvImageCake"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
