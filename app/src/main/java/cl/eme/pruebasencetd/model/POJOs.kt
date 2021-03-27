@@ -15,8 +15,11 @@ data class Cakes (
         val price: String,
         val image: String,
         )
-data class CakeDetail (
-        @PrimaryKey val id: String,
+
+@Entity (tableName = "cakeDetails")
+
+data class CakeDetails (
+        @PrimaryKey val id: Int,
         val title: String,
         val previewDescription: String,
         val detailDescription: String,

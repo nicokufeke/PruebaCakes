@@ -9,9 +9,9 @@ import retrofit2.http.Path
 interface Product2API {
 
     @GET("cakes/")
-    suspend fun getCakes() : Response<List<Products2>>
+    suspend fun getCakes() : Response<List<Cakes>>
 
-    @GET("cakedetal/{pid")
+    @GET("cakeDetails/{pid")
     suspend fun getCake(@Path("pid") id: Int)
 }
 
