@@ -6,13 +6,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface Product2API {
+interface CakesAPI {
 
     @GET("cakes/")
     suspend fun getCakes() : Response<List<Cakes>>
 
-    @GET("cakeDetails/{pid")
-    suspend fun getCake(@Path("pid") id: Int)
+    @GET("cakeDetails/{pid}")
+    suspend fun getCake(@Path("pid") id: Int) : Response<CakeDetails>
 }
 
 //Cliente Retrofit
@@ -21,11 +21,11 @@ const val BASE_URL = "https://my-json-server.typicode.com/Himuravidal/cakesApi/"
 class RetrofitClient {
     companion object {
 
-        fun instance() : Product2API{
+        fun instance() : CakesAPI{
             val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(
                 GsonConverterFactory.create()).build()
 
-            return retrofit.create(Product2API::class.java)
+            return retrofit.create(CakesAPI::class.java)
 
         }
     }
